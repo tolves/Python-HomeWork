@@ -1,8 +1,10 @@
 import time
+
+
 def run(num):
 	num = abs(num)
 
-	result = []
+	results = []
 
 	for i in range(0,num):
 
@@ -17,13 +19,20 @@ def run(num):
 			sum = sum + pow(int(item),int(length))
 
 			if(sum > i):
+
 				break
 
 		if(sum == i):
-			result.append(sum)
 
-	print(result)
+			results.append(sum)
+
+	print(results)
+
+
 start = time.clock()
+
 run(100000)
+
 elapsed = (time.clock() - start)
+
 print("Time used:",elapsed)
