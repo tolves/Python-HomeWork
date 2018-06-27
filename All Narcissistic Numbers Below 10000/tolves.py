@@ -2,6 +2,7 @@ import time
 
 
 def run(num):
+	
 	num = abs(num)
 
 	results = []
@@ -31,7 +32,7 @@ def run(num):
 
 start = time.clock()
 
-run(100000)
+run(10000)
 
 elapsed = (time.clock() - start)
 
