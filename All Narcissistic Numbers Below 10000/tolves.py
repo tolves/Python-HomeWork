@@ -7,6 +7,17 @@ def run(num):
 
 	results = []
 
+	max_length = len(str(num))
+
+	dic = [([0]*max_length) for i in range(10)]
+
+	#calculate the 0-9 first
+	for i in range(0,9):
+
+		for j in range(0,max_length):
+
+			dic[i][j] = pow(i,j)
+
 	for i in range(0,num):
 
 		length = len(str(i))
@@ -17,7 +28,12 @@ def run(num):
 
 		for item in x:
 
-			sum = sum + pow(int(item),int(length))
+			#almost 0.036s
+			# sum = sum + pow(int(item),int(length))
+
+			#directly use the calculated dic to read the value
+			#0.028s
+			sum = sum + dic[int(item)][int(length)]
 
 			if(sum > i):
 
