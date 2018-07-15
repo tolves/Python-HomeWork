@@ -9,10 +9,10 @@ def run(num):
 
 	max_length = len(str(num))
 
-	dic = [([0]*max_length) for i in range(10)]
+	dic = [( [0] * max_length ) for i in range(10)]
 
 	#calculate the 0-9 first
-	for i in range(0,9):
+	for i in range(0,10):
 
 		for j in range(0,max_length):
 
